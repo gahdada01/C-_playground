@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C88E6E2-5F3A-493C-989F-F5AEF6E6DF06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Benificiaries.cs" />
+    <Compile Include="COInsured.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="fAEClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAEClient.Designer.cs">
+      <DependentUpon>fAEClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fClient.Designer.cs">
+      <DependentUpon>fClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAEBenif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAEBenif.Designer.cs">
+      <DependentUpon>fAEBenif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAECoInsured.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAECoInsured.Designer.cs">
+      <DependentUpon>fAECoInsured.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fViewCoI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fViewCoI.Designer.cs">
+      <DependentUpon>fViewCoI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fViewBenif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fViewBenif.Designer.cs">
+      <DependentUpon>fViewBenif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAEClient.resx">
+      <DependentUpon>fAEClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fClient.resx">
+      <DependentUpon>fClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAEBenif.resx">
+      <DependentUpon>fAEBenif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAECoInsured.resx">
+      <DependentUpon>fAECoInsured.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fViewBenif.resx">
+      <DependentUpon>fViewBenif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fViewCoI.resx">
+      <DependentUpon>fViewCoI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

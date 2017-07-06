@@ -1,0 +1,16 @@
+tabControl1.SelectedIndex = (tabControl1.SelectedIndex + 1 < tabControl1.TabCount) ?
+                             tabControl1.SelectedIndex + 1 : tabControl1.SelectedIndex;
+
+
+
+
+
+-------------------
+
+ tabPage1.Enabled = false; // this disables the controls on it
+        tabPage1.Visible = false; 
+
+
+comboBox1.SelectedItem = "test1";
+ComboBox1.Text = "test1";
+Combox1.SelectedIndex = Combox1.FindStringExact("test1")

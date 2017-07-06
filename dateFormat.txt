@@ -1,0 +1,10 @@
+DATE_FORMAT(NOW(),'%b %d %Y %h:%i %p')
+DATE_FORMAT(NOW(),'%m-%d-%Y')
+DATE_FORMAT(NOW(),'%d %b %y')
+DATE_FORMAT(NOW(),'%d %b %Y %T:%f')
+The result would look something like this:
+
+Nov 04 2008 11:45 PM
+11-04-2008
+04 Nov 08
+04 Nov 2008 11:45:34:243
